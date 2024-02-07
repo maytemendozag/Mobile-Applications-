@@ -1,0 +1,254 @@
+import * as React from "react";
+import { FlatList, ScrollView, View, StyleSheet, Image, Text } from "react-native";
+
+function MyComponent() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <Text style={styles.headerText}>Profile</Text>
+        <Image
+          resizeMode="auto"
+          source={{
+            uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/7e60d3ffda04a2f18eb15519da6c51388436d919db35b003776d99ec26376da4?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.profileIcon}
+        />
+      </View>
+      <View style={styles.infoContainer}>
+        <Image
+          resizeMode="auto"
+          source={{
+            uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/175623be302690986a84a7a98f68cd960be7f89f792f96496baa274227ec91b6?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.avatar}
+        />
+        <Text style={styles.nameText}>Name Surname</Text>
+        <Text style={styles.tagText}>@tag</Text>
+        <Text style={styles.statText}>Average response time: 24 seconds</Text>
+        <Text style={styles.statText}>
+          Attended activities in the last 30 days: 7/13
+        </Text>
+        <Text style={styles.statText}>Proposed activities in the last 30 days: 3</Text>
+        <Text style={styles.favoriteText}>
+          Favourite category: <Text style={styles.categoryEmoji}>🥊 Work out</Text>
+        </Text>
+        <Text style={styles.editProfileText}>Edit profile</Text>
+        <Text style={styles.deleteAccountText}>Delete my account</Text>
+      </View>
+      <View style={styles.notificationSettingsContainer}>
+        <Text style={styles.notificationSettingsText}>Notifications settings</Text>
+        <View style={styles.notificationOptionContainer}>
+          <View style={styles.optionIndicator} />
+          <Text style={styles.optionDescriptionText}>Notifications from anybody</Text>
+        </View>
+        <Text style={styles.optionNoteText}>
+          by disabling this option you will only receive notifications of new events proposed by your friends
+        </Text>
+        <View style={styles.notificationOptionContainer}>
+          <View style={styles.optionIndicator} />
+          <Text style={styles.optionDescriptionText}>Received answers</Text>
+        </View>
+        <Text style={styles.tagNotificationText}>@tag has answered Yes! to your activity</Text>
+        <View style={styles.notificationOptionContainer}>
+          <View style={styles.optionIndicator} />
+          <Text style={styles.optionDescriptionText}>New activities</Text>
+        </View>
+        <Text style={styles.tagNotificationText}>
+          @tag wants you to join “Going to the Gym” at 17:00
+        </Text>
+        <View style={styles.notificationOptionContainer}>
+          <View style={styles.optionIndicator} />
+          <Text style={styles.optionDescriptionText}>Friends requests</Text>
+        </View>
+        <Text style={styles.tagNotificationText}>@tag has sent you a friend request</Text>
+      </View>
+      <View style={styles.textMessagingAppContainer}>
+        <Text style={styles.textMessagingAppText}>Preferred text-messaging app</Text>
+        <Image
+          resizeMode="auto"
+          source={{
+            uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4773d2df236093ec3e372f7405adc704b9a76a5b28c234dd7f6f721e52a1ede1?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.messagingAppIcon}
+        />
+        <Text style={styles.appNameText}>WhatsApp</Text>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "stretch",
+    backgroundColor: "#2B2B2B",
+    display: "flex",
+    maxWidth: 480,
+    width: "100%",
+    flexDirection: "column",
+    fontSize: 15,
+    fontWeight: "500",
+    margin: "0 auto",
+    padding: 44,
+  },
+  headerContainer: {
+    alignSelf: "end",
+    display: "flex",
+    width: 183,
+    maxWidth: "100%",
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 20,
+    color: "#F8F8F8",
+    textAlign: "center",
+  },
+  headerText: {
+    fontFamily: "Helvetica Neue, sans-serif",
+    fontStyle: "italic",
+  },
+  profileIcon: {
+    stroke: "#A0A0A0",
+    position: "relative",
+    width: 17,
+    aspectRatio: "1.14",
+  },
+  infoContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 8,
+    backgroundColor: "#3B3B3B",
+    display: "flex",
+    marginTop: 19,
+    padding: 32,
+  },
+  avatar: {
+    position: "relative",
+    width: 85,
+    aspectRatio: "1",
+  },
+  nameText: {
+    color: "#F8F8F8",
+    fontFamily: "Inter, sans-serif",
+    fontStyle: "italic",
+    marginTop: 14,
+  },
+  tagText: {
+    color: "#F8F8F8",
+    marginTop: 13,
+    fontStyle: "italic",
+    fontSize: 12,
+    fontFamily: "Inter, sans-serif",
+  },
+  statText: {
+    textAlign: "center",
+    fontFamily: "Inter, sans-serif",
+    fontStyle: "italic",
+    marginTop: 14,
+  },
+  favoriteText: {
+    textAlign: "center",
+    fontFamily: "Inter, sans-serif",
+    fontStyle: "italic",
+    marginTop: 14,
+    color: "#EEDFF6",
+  },
+  categoryEmoji: {
+    fontWeight: "700",
+  },
+  editProfileText: {
+    color: "#AFE8C4",
+    textAlign: "center",
+    marginTop: 30,
+    fontStyle: "italic",
+    fontWeight: "700",
+    fontSize: 10,
+    fontFamily: "Inter, sans-serif",
+  },
+  deleteAccountText: {
+    color: "#FDD3D5",
+    textAlign: "center",
+    marginTop: 7,
+    fontStyle: "italic",
+    fontWeight: "700",
+    fontSize: 10,
+    fontFamily: "Inter, sans-serif",
+  },
+  notificationSettingsContainer: {
+    color: "#F8F8F8",
+    textAlign: "center",
+    fontFamily: "Helvetica Neue, sans-serif",
+    fontStyle: "italic",
+    alignSelf: "center",
+    marginTop: 17,
+  },
+  notificationSettingsText: {
+    color: "#F8F8F8",
+    textAlign: "center",
+    fontFamily: "Helvetica Neue, sans-serif",
+    fontStyle: "italic",
+    alignSelf: "center",
+    marginTop: 17,
+  },
+  notificationOptionContainer: {
+    display: "flex",
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 9,
+    marginTop: 17,
+  },
+  optionIndicator: {
+    borderRadius: 4,
+    backgroundColor: "#424242",
+    width: 16,
+    height: 16,
+  },
+  optionDescriptionText: {
+    fontFamily: "Inter, sans-serif",
+    fontStyle: "italic",
+    flexGrow: 1,
+    flexShrink: 1,
+    margin: "auto 0",
+  },
+  optionNoteText: {
+    color: "#A0A0A0",
+    marginTop: 7,
+    fontStyle: "italic",
+    fontSize: 9,
+    fontFamily: "Inter, sans-serif",
+  },
+  tagNotificationText: {
+    color: "#A0A0A0",
+    alignSelf: "center",
+    marginTop: 7,
+    fontStyle: "italic",
+    fontSize: 9,
+    fontFamily: "Inter, sans-serif",
+  },
+  textMessagingAppContainer: {
+    borderRadius: 8,
+    backgroundColor: "#3B3B3B",
+    display: "flex",
+    marginTop: 17,
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    padding: 4,
+  },
+  textMessagingAppText: {
+    color: "#F8F8F8",
+    textAlign: "center",
+    fontFamily: "Helvetica Neue, sans-serif",
+    fontStyle: "italic",
+    alignSelf: "center",
+    marginTop: 17,
+  },
+  messagingAppIcon: {
+    position: "relative",
+    width: 49,
+    aspectRatio: "1",
+  },
+  appNameText: {
+    fontFamily: "Helvetica Neue, sans-serif",
+    fontStyle: "italic",
+    alignSelf: "start",
+    marginTop: 20,
+  },
+});

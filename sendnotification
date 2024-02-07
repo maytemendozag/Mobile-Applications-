@@ -1,0 +1,89 @@
+import * as React from "react";
+import { StyleSheet, Image, Text, View } from "react-native";
+
+function MyComponent() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.headerText}>Spontan</Text>
+      <Text style={styles.subtitleText}>
+        I’m feeling spontaneous...
+      </Text>
+      <View style={styles.card}>
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4be477d3838647abf46de9e6866d4eb6af0d853fe546ae1c6a0e15c0432c835d?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.cardImage} />
+        <Text style={styles.cardTitle}>Title</Text>
+        <View style={styles.placeholder} />
+        <Text style={styles.cardDescription}>Description</Text>
+        <Text style={styles.actionText}>I want to...</Text>
+        <View style={styles.imageScrollContainer}>
+          <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/09116e721dbe2024bd9ac34c1b120119629deafdbb1024fe5efe1fdf8bd486f5?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.scrollImage} />
+          <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/6ce1f723c2e1804ff77528c6dd0508dee1b5fb1e2391b83bf93242f1672dc947?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.scrollImage} />
+          <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/3d5d68ca3f0c50e7df3006ba3172dad6daf38096319e0a988c8c845a8a2eb2ec?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.scrollImage} />
+          <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/e9f91a6fbe49bf372610ebed53110c0247a003bc68aa21bb181a50d5f3a9a467?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.scrollImage} />
+        </View>
+        <Text style={styles.suggestionText}>💡 Other</Text>
+      </View>
+      <View style={styles.locationContainer}>
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/0cad38d44aa16e5e1bc35c3994d628dcfbb98265b9d6e2a3898823c2f98a2ccb?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.locationImage} />
+        <Text style={styles.locationText}>Location</Text>
+      </View>
+      <View style={styles.placeholder} />
+      <View style={styles.dateTimeContainer}>
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/a1b9f17442f97a157b1abd93e378eff58b2cfcc9a087a6af0d47cc1b8c7cd061?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.dateTimeImage} />
+        <Text style={styles.dateTimeText}>Date and time</Text>
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/a04b5e752cf5b3dbbe5cdcf7c915a0a438d0270cc431fd4c40fc6a83942149c1?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.calendarImage} />
+      </View>
+      <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/721a13cfaf3c39971328c0d95a5861ecfde39f056c3ce4b1c6cdf32bb47e0c2b?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.floatingImage} />
+      <View style={styles.responseTimeContainer}>
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/b5d8c331a6d49a49cb98ed04e3e273b07103bfce3028d6aa6137887f221da04d?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.responseTimeImage} />
+        <Text style={styles.responseTimeText}>Response time limit</Text>
+      </View>
+      <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/f8205b54fc543d8dcd74e9ae62611b193ca04543ff0eb0ea60de0dd1fd136a0b?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.largeImage} />
+      <Text style={styles.addFriendsText}>Add friends</Text>
+      <View style={styles.friendsContainer}>
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/7294c975a815f130312bb41f48789a4a21ea92835c1f848f773af3ffd9346297?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.friendImage} />
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/185461c2a088f62c5dd2a4423b43ec07c006f1f613a61477dd43400ea3e3f847?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.friendImage} />
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/185461c2a088f62c5dd2a4423b43ec07c006f1f613a61477dd43400ea3e3f847?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.friendImage} />
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/185461c2a088f62c5dd2a4423b43ec07c006f1f613a61477dd43400ea3e3f847?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.friendImage} />
+        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/185461c2a088f62c5dd2a4423b43ec07c006f1f613a61477dd43400ea3e3f847?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.friendImage} />
+      </View>
+      <Text style={styles.uploadText}>Upload picture</Text>
+      <View style={styles.addPictureButton} />
+      <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/7d50b4e0d0e1e4486d1439ebaa1ada149f86a160fac8582c076a54b3e1a29e2b?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.profileImage} />
+      <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/68d1f923c1c3d3a80b3fb04da603eb7e9cb691775ac3c6896c72c5b6fc8fcab6?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.cameraImage} />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { justifyContent: "flex-end", alignItems: "center", backgroundColor: "#2B2B2B", maxWidth: 360, flexDirection: "column", padding: 50 },
+  headerText: { color: "#F8F8F8", textAlign: "center", marginTop: 6, fontStyle: "italic", fontWeight: "700", fontSize: 32, fontFamily: "Helvetica Neue, sans-serif" },
+  subtitleText: { color: "#F8F8F8", textAlign: "center", marginTop: 40, fontStyle: "italic", fontWeight: "500", fontSize: 24, lineHeight: 24, fontFamily: "Helvetica Neue, sans-serif" },
+  card: { borderRadius: 8, boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.20)", backgroundColor: "#3B3B3B", alignSelf: "stretch", marginTop: 29, width: "100%", flexDirection: "column", alignItems: "start", padding: 5 },
+  cardImage: { width: 12, aspectRatio: 1 },
+  cardTitle: { color: "#A0A0A0", marginTop: 16, marginLeft: 18, fontWeight: "500", fontSize: 10, fontFamily: "Helvetica Neue, sans-serif" },
+  placeholder: { borderRadius: 8, backgroundColor: "#424242", alignSelf: "center", marginTop: 8, width: 284, height: 24 },
+  cardDescription: { color: "#A0A0A0", marginTop: 17, marginLeft: 18, fontSize: 10, fontFamily: "Helvetica Neue, sans-serif" },
+  actionText: { borderRadius: 8, backgroundColor: "#424242", alignSelf: "center", marginTop: 6, width: 284, justifyContent: "center", alignItems: "start", padding: 9 , color: "#D9D9D9", fontSize: 8, fontStyle: "italic", fontFamily: "Helvetica Neue, sans-serif"},
+  imageScrollContainer: { alignItems: "stretch", overflowX: "auto", alignSelf: "center", marginTop: 8, width: "100%", gap: 20, padding: 4 },
+  scrollImage: { width: 29, aspectRatio: 2.44 },
+  suggestionText: { color: "#000", textAlign: "center", fontStyle: "italic", fontWeight: "700", fontSize: 10, fontFamily: "Helvetica Neue, sans-serif" },
+  locationContainer: { flexDirection: "row", alignItems: "center", marginTop: 21, marginLeft: 18 },
+  locationImage: { width: 5, aspectRatio: 0.71 },
+  locationText: { fontSize: 10, color: "#A0A0A0", marginLeft: 7, fontFamily: "Helvetica Neue, sans-serif" },
+  dateTimeContainer: { flexDirection: "row", alignItems: "center", marginTop: 17, marginLeft: 18 },
+  dateTimeImage: { width: 7, aspectRatio: 1 },
+  dateTimeText: { fontSize: 10, color: "#A0A0A0", marginLeft: 1, fontFamily: "Helvetica Neue, sans-serif" },
+  calendarImage: { marginTop: 12, width: 77, aspectRatio: 7.14 },
+  floatingImage: { marginTop: 19, width: "100%", aspectRatio: 5.88 },
+  responseTimeContainer: { flexDirection: "row", alignItems: "center", marginTop: 26, marginLeft: 18 },
+  responseTimeImage: { width: 5, aspectRatio: 0.71 },
+  responseTimeText: { fontSize: 10, color: "#A0A0A0", marginLeft: 7, fontFamily: "Helvetica Neue, sans-serif" },
+  largeImage: { width: 64, marginTop: 10, marginLeft: 28, aspectRatio: 5.88 },
+  addFriendsText: { color: "#A0A0A0", marginTop: 26, marginLeft: 18, fontSize: 10, fontFamily: "Helvetica Neue, sans-serif" },
+  friendsContainer: { flexDirection: "row", alignItems: "center", marginTop: 8, marginLeft: 18, gap: 10 },
+  friendImage: { width: "20%", aspectRatio: 1 },
+  uploadText: { color: "#A0A0A0", marginTop: 17, marginLeft: 18, fontSize: 10, fontFamily: "Helvetica Neue, sans-serif" },
+  addPictureButton: { borderRadius: 36, backgroundColor: "#AFE8C4", width: 72, height: 72, marginTop: 6, marginLeft: 18 },
+  profileImage: { marginTop: 16, marginLeft: 18, width: "100%", aspectRatio: Infinity },
+  cameraImage: { marginTop: 21, marginRight: 11, width: 32, aspectRatio: 2.63 }
+});

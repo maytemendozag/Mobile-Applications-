@@ -1,0 +1,124 @@
+import * as React from 'react';
+import {FlatList, ScrollView, View, StyleSheet, Image, Text, TextInput, TouchableOpacity} from 'react-native';
+
+function MyComponent() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.headerText}>Spontan</Text>
+
+      <Text style={styles.taglineText}> Embrace the spark of Spontaneity! </Text>
+
+      <View style={styles.formContainer}>
+
+        <View style={styles.fieldGroup}>
+          <Text style={styles.label}>First Name</Text>
+          <TextInput style={styles.input} />
+        </View>
+
+        <View style={styles.fieldGroup}>
+          <Text style={styles.label}>Last Name</Text>
+          <TextInput style={styles.input} />
+        </View>
+
+        <View style={styles.fieldGroup}>
+          <Text style={styles.label}>Email</Text>
+          <TextInput style={styles.input} />
+        </View>
+
+        <View style={styles.fieldGroup}>
+          <Text style={styles.label}>Tag</Text>
+          <TextInput style={styles.input} />
+        </View>
+
+        <View style={styles.fieldGroup}>
+          <Text style={styles.label}>Password</Text>
+          <TextInput style={styles.input} secureTextEntry={true} />
+        </View>
+
+        <View style={styles.fieldGroup}>
+          <Text style={styles.label}>Confirm password</Text>
+          <TextInput style={styles.input} secureTextEntry={true} />
+        </View>
+
+        <TouchableOpacity style={styles.button}>
+          <Text>Register</Text>
+        </TouchableOpacity>
+
+      </View>
+
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>Already have an account?</Text>
+        <TouchableOpacity>
+          <Text style={styles.loginText}>Log In</Text>
+        </TouchableOpacity>
+      </View>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#2B2B2B',
+    flex: 1,
+    alignItems: 'center',
+    padding: 50,
+  },
+  headerText: {
+    color: '#F8F8F8',
+    textAlign: 'center',
+    marginTop: 6,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fontSize: 32,
+  },
+  taglineText: {
+    color: '#F8F8F8',
+    textAlign: 'center',
+    marginTop: 40,
+    fontStyle: 'italic',
+    fontWeight: '500',
+    fontSize: 24,
+  },
+  formContainer: {
+    alignItems: 'stretch',
+    borderRadius: 8,
+    backgroundColor: '#3B3B3B',
+    alignSelf: 'stretch',
+    marginTop: 29,
+    width: '100%',
+    flexDirection: 'column',
+    padding: 50,
+  },
+  fieldGroup: {
+    marginBottom: 12,
+  },
+  label: {
+    color: '#F8F8F8',
+    marginBottom: 8,
+  },
+  input: {
+    backgroundColor: '#424242',
+    color: '#F8F8F8',
+    height: 40,
+    borderRadius: 8,
+  },
+  button: {
+    backgroundColor: '#D4F0FC',
+    padding: 10,
+    alignSelf: 'center',
+    marginTop: 30,
+    borderRadius: 8,
+  },
+  footer: {
+    flexDirection: 'row',
+    marginTop: 16,
+  },
+  footerText: {
+    color: '#A0A0A0',
+    marginRight: 8,
+  },
+  loginText: {
+    color: '#AFE8C4',
+  },
+});

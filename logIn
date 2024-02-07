@@ -1,0 +1,136 @@
+import * as React from "react";
+import { ScrollView, View, StyleSheet, Image, Text, TextInput, Button } from "react-native";
+
+function MyComponent() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.introContainer}>
+        <Text style={styles.title}>Spontan</Text>
+        <Text style={styles.subTitle}>
+          Embrace the <br /> spark of Spontaneity!{" "}
+        </Text>
+        <View style={styles.inputContainer}>
+          <Text style={styles.inputLabel}>Tag or email</Text>
+          <TextInput style={styles.emailInput} />
+          <Text style={styles.inputLabel}>Password</Text>
+          <TextInput style={styles.passwordInput} secureTextEntry={true} />
+          <View style={styles.remeberMeContainer}>
+            <Button onPress={() => {}} />
+            <Text>Remember me</Text>
+          </View>
+        </View>
+        <Image
+          resizeMode="auto"
+          source={{
+            uri:
+              "https://cdn.builder.io/api/v1/image/assets/TEMP/d7a8fc31508533151ca84ad89940a0cc34d7a9f21590ad963480ff2116a6e1d0?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.loginButtonImagen}
+        />
+        <View style={styles.accountLinkContainer}>
+          <View>
+            <Text>Don’t have an account?</Text>
+          </View>
+          <View>
+            <Text>Register</Text>
+          </View>
+        </View>
+        <View>
+          <Text>Forgot password?</Text>
+        </View>
+      </View>
+      <ScrollView style={styles.contentContainer}>
+        {/*
+          Your Items would be listed here using FlatList or some other ways for the sake of maintainability 
+          of the code, I've simplified how those items would be.
+        */}
+      </ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#2B2B2B",
+    display: "flex",
+    maxWidth: 360,
+    flexDirection: "column",
+    alignItems: "stretch",
+    padding: 50,
+  },
+  introContainer: {
+    textAlign: "center",
+  },
+  title: {
+    color: "#F8F8F8",
+    marginTop: 6,
+    fontSize: 32,
+    textAlign: "center",
+    fontFamily: "Helvetica Neue",
+    fontStyle: "italic",
+    fontWeight: "700",
+  },
+  subTitle: {
+    color: "#F8F8F8",
+    textAlign: "center",
+    marginTop: 40,
+    fontFamily: "Helvetica Neue",
+    fontStyle: "italic",
+    fontWeight: "500",
+    fontSize: 24,
+    lineHeight: 24,
+  },
+  inputContainer: {
+    backgroundColor: "#3B3B3B",
+    marginTop: 29,
+    flexDirection: "column",
+    borderRadius: 8,
+    alignItems: "stretch",
+    justifyContent: "center",
+    padding: 48,
+  },
+  inputLabel: {
+    color: "#F8F8F8",
+    marginTop: 19,
+  },
+  emailInput: {
+    height: 24,
+    marginTop: 9,
+    borderRadius: 8,
+    backgroundColor: "#424242",
+    fontFamily: "Helvetica Neue",
+    fontStyle: "italic",
+  },
+  passwordInput: {
+    height: 24,
+    marginTop: 12,
+    borderRadius: 8,
+    backgroundColor: "#424242",
+  },
+  remeberMeContainer: {
+    flexDirection: "row",
+    marginTop: 16,
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    fontSize: 12,
+    color: "#A0A0A0",
+  },
+  loginButtonImagen: {
+    alignSelf: "center",
+    marginTop: 46,
+    width: 62,
+  },
+  accountLinkContainer: {
+    marginTop: 19,
+    alignSelf: "center",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    fontSize: 10,
+    fontWeight: "700",
+    fontFamily: "Helvetica Neue",
+    fontStyle: "italic",
+  },
+  contentContainer: {
+    marginTop: 16,
+  },
+});

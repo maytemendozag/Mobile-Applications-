@@ -1,0 +1,77 @@
+import * as React from "react";
+import { ScrollView, Image, Text, StyleSheet } from "react-native"; 
+
+function MyComponent() { 
+    return ( 
+        <ScrollView style={styles.mainContainer}>
+            <header style={styles.headerContainer}>
+                <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/e38b5091e5a074ac5f9efec7b46baffe452ae0b5fc928fff730bba78d2b03e90?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.headerImage} />
+                <Text>Spontan</Text>
+            </header>
+
+            <nav style={styles.navigationContainer}>
+                <Text>friends</Text>
+                <Text>|</Text>
+                <Text>main</Text>
+                <Text>|</Text>
+                <Text>activities</Text>
+            </nav>
+
+            <section style={styles.sectionContainer}>
+                <div style={styles.sectionRow}>
+                    <Text>@tag</Text>
+                    <Text>category</Text>
+                    <Text>09:37</Text>
+                </div>
+                
+                <h1 style={styles.sectionHeading}>Heading title from the form</h1>
+                <p style={styles.sectionParagraph}>I want to go to the gym, tomorrow at 13:00.</p>
+                
+                <div style={styles.sectionWithImage}>
+                    <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/ba418c362da8e4daf6a50999880f752916ae2ec925bf3eef333b876d37c64bd7?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.sectionIcon} />
+                    <Text>Tomorrow 13.00 - 15.00</Text>
+                </div>
+
+                <div style={styles.sectionWithImage}>
+                    <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4eb1f4ecd9e979c19ce2b22dc02f6c525e9524c7b01840ad2f3faf0acf88e187?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.sectionIcon} />
+                    <Text>Fitness Fridhemsplan</Text>
+                </div>
+
+                <div style={styles.sectionDivider} />
+
+                <aside style={styles.asideContainer}>
+                    <Image resizeMode="cover" fitContent={true} source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/479ee96b27e76ef15e55b142da53b9b99ca956ca54c83e14f95d05f9e0d32b57?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.asideImageContainer} >
+                        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4f30d27ae31de583401676d867fc32fb16b05fbac5ab7f08c3dc0b0a5368125a?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.asideImage} />
+                    </Image>
+                    <Text>1/2</Text>
+                </aside>
+
+                <div style={styles.asideThumbnailContainer}>
+                    <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/39eeeeae0e264b3299d17538f60320a33e031ec2066091505bfb319c9197b203?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.asideThumbnail} />
+                    <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/240093ebb0b4ad83139caedba9b3bf477fb895fa4be735683bb7062750a9dff3?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.asideThumbnail} />
+                    <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/248f5503458a5a6cfebe81cffdec7dc81139ed873b5842b59e2e437e476f1bb5?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.asideThumbnail} />
+                </div>
+            </section>
+            // other sections are similar to this one
+        </ScrollView> 
+    );
+} 
+
+const styles = StyleSheet.create({
+    mainContainer: { backgroundColor: "black", padding: 32 },
+    headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", fontSize: 32, color: "white", fontWeight: "700" },
+    headerImage: { width: 16 },
+    navigationContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 32, fontSize: 24, color: "white", fontWeight: "400" },
+    sectionContainer: { marginTop: 25, backgroundColor: "#3B3B3B", borderRadius: 8, padding: 18 },
+    sectionRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", fontSize: 10, color: "#A0A0A0", fontWeight: "300" },
+    sectionHeading: { fontSize: 20, fontWeight: '700', marginTop: 16, color: "white" },
+    sectionParagraph: { fontSize: 10, marginTop: 14, color: "#A0A0A0" },
+    sectionWithImage: { flexDirection: "row", marginTop: 22, justifyContent: "flex-start", alignItems: "center", fontSize: 10, color: "#A0A0A0", fontWeight: "400" },
+    sectionIcon: { width: 15, marginRight: 8 },
+    sectionDivider: { backgroundColor: "#A0A0A0", marginTop: 12, height: 1 },
+    asideContainer: { flexDirection: "row", justifyContent: 'space-between', alignItems: 'center', marginTop: 15 },
+    asideImageContainer: { width: 50, aspectRatio: "5", justifyContent: "center", alignItems: "center" },
+    asideImage: { width: "100%", aspectRatio: "3.03" },
+    asideThumbnailContainer: { flexDirection: "row", justifyContent: 'space-between', alignItems: 'center' },
+    asideThumbnail: {width: 24, aspectRatio: "1" },
+});

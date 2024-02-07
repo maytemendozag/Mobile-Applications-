@@ -1,0 +1,268 @@
+import * as React from "react";
+import { FlatList, ScrollView, View, StyleSheet, Image, Text } from "react-native";
+
+function MyComponent() {
+    return ( 
+        <View style={styles.pageContainer}>
+            <View style={styles.header}>
+                <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/e38b5091e5a074ac5f9efec7b46baffe452ae0b5fc928fff730bba78d2b03e90?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.logo} />
+                <View style={styles.brandName}>
+                    <Text>Spontan</Text> 
+                </View> 
+            </View> 
+            <View style={styles.navbar}>
+                <View style={styles.navItem}>
+                    <Text>friends</Text> 
+                </View> 
+                <View style={styles.navSeparator}>
+                    <Text>|</Text> 
+                </View> 
+                <View style={styles.navItem}>
+                    <Text>main</Text> 
+                </View> 
+                <View style={styles.navSeparator}>
+                    <Text>|</Text> 
+                </View> 
+                <View style={styles.navItem}>
+                    <Text>activities</Text> 
+                </View> 
+            </View> 
+            <ScrollView>
+                <View style={styles.card}>
+                    <View style={styles.cardDetails}>
+                        <View style={styles.cardDetailItem}>
+                            <Text>you</Text> 
+                        </View> 
+                        <View style={styles.cardDetailItem}>
+                            <Text>category</Text> 
+                        </View> 
+                        <View style={styles.cardDetailItem}>
+                            <Text>09:37</Text> 
+                        </View> 
+                    </View> 
+                    <View style={styles.cardTitle}>
+                        <Text>Heading title from the form</Text> 
+                    </View> 
+                    <View style={styles.cardSubTitle}>
+                        <Text>I want to go to the gym, tomorrow at 13:00.</Text> 
+                    </View> 
+                    <View style={styles.cardSchedule}>
+                        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/ba418c362da8e4daf6a50999880f752916ae2ec925bf3eef333b876d37c64bd7?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.scheduleIcon} />
+                        <View style={styles.scheduleText}>
+                            <Text>Tomorrow 13.00 - 15.00</Text> 
+                        </View> 
+                    </View> 
+                    <View style={styles.cardLocation}>
+                        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4eb1f4ecd9e979c19ce2b22dc02f6c525e9524c7b01840ad2f3faf0acf88e187?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.locationIcon} />
+                        <View style={styles.locationText}>
+                            <Text>Fitness Fridhemsplan</Text> 
+                        </View> 
+                    </View> 
+                    <View style={styles.cardDivider} />
+                    <View style={styles.cardRSVP}>
+                        <Image resizeMode="cover" fitContent={true} source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/479ee96b27e76ef15e55b142da53b9b99ca956ca54c83e14f95d05f9e0d32b57?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.rsvpImage} >
+                            <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4f30d27ae31de583401676d867fc32fb16b05fbac5ab7f08c3dc0b0a5368125a?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.rsvpStar} />
+                        </Image> 
+                        <View style={styles.rsvpStats}>
+                            <Text>1/2 </Text> 
+                        </View> 
+                        <View style={styles.rsvpCaption}>
+                            <Text>Who answered</Text> 
+                        </View> 
+                        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/59a72c3a756e960811296e640b775f52604a68b0c972ce15c4f2d8eb4e2e0f04?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.answeredAvatar} />
+                        <Image resizeMode="auto" source={{ uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/235b2ac62918cd2e20274ad3718d6aead8caea588ab17a7a5b31e6875a0cecaa?apiKey=622ad441e8974127abe2d2704e8e167a&", }} style={styles.pendingAvatar} />
+                    </View> 
+                </View>
+            </ScrollView>
+        </View> 
+    );
+} 
+
+const styles = StyleSheet.create({
+    pageContainer: { 
+        backgroundColor: "#2B2B2B", 
+        display: "flex",
+        maxWidth: 360, 
+        flexDirection: "column", 
+        alignItems: "stretch", 
+        padding: "32px 20px 8px", 
+    }, 
+    header: {
+        display: "flex", 
+        alignItems: "stretch", 
+        justifyContent: "space-between", 
+        gap: 20, 
+        fontSize: 32, 
+        color: "#F8F8F8", 
+        fontWeight: "700", 
+        whiteSpace: "nowrap", 
+        textAlign: "center", 
+    }, 
+    logo: {
+        position: "relative", 
+        width: 16, 
+        margin: "auto 0", 
+        aspectRatio: "1.23", 
+    }, 
+    brandName: {
+        fontFamily: "Helvetica Neue, sans-serif", 
+        fontStyle: "italic", 
+        flexGrow: "1", 
+        flexShrink: "1", 
+        flexBasis: "auto", 
+    },
+    navbar: {
+        display: "flex", 
+        marginTop: 32, 
+        alignItems: "stretch", 
+        justifyContent: "space-between", 
+        gap: 20, 
+        fontSize: 24, 
+        color: "#F8F8F8", 
+        fontWeight: "400", 
+        whiteSpace: "nowrap", 
+    }, 
+    navItem: {
+        fontFamily: "Helvetica Neue, sans-serif", 
+        fontStyle: "italic", 
+        flexGrow: "1", 
+    },
+    navSeparator: {
+        font: "16px HeadlandOne, sans-serif ",
+    },
+    card: {
+        borderRadius: 8, 
+        boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+        backgroundColor: "#3B3B3B", 
+        display: "flex", 
+        marginTop: 25, 
+        width: "100%", 
+        flexDirection: "column", 
+        alignItems: "stretch", 
+        padding: "20px 18px", 
+    },
+    cardDetails: {
+        display: "flex", 
+        alignItems: "stretch", 
+        justifyContent: "space-between", 
+        gap: 20, 
+        fontSize: 10, 
+        color: "#A0A0A0", 
+        fontWeight: "300", 
+        whiteSpace: "nowrap", 
+    },
+    cardDetailItem: {
+        fontFamily: "Helvetica Neue, sans-serif", 
+        fontStyle: "italic", 
+    },
+    cardTitle: {
+        color: "#F8F8F8", 
+        marginTop: 16, 
+        whiteSpace: "nowrap", 
+        font: "italic 700 20px Helvetica Neue, sans-serif ", 
+    },
+    cardSubTitle: {
+        color: "#A0A0A0", 
+        marginTop: 14, 
+        whiteSpace: "nowrap", 
+        font: "400 10px Helvetica Neue, sans-serif ", 
+    },
+    cardSchedule: {
+        display: "flex", 
+        marginTop: 22, 
+        alignItems: "stretch", 
+        justifyContent: "space-between", 
+        gap: 8, 
+        fontSize: 10, 
+        color: "#A0A0A0", 
+        fontWeight: "400", 
+    },
+    scheduleIcon: {
+        position: "relative", 
+        width: 15, 
+        aspectRatio: "1" 
+    },
+    scheduleText: {
+        fontFamily: "Helvetica Neue, sans-serif", 
+        flexGrow: "1", 
+        flexShrink: "1", 
+        flexBasis: "auto", 
+        margin: "auto 0", 
+    },
+    cardLocation: {
+        display: "flex", 
+        marginTop: 9, 
+        alignItems: "stretch", 
+        justifyContent: "space-between", 
+        gap: 11, 
+        fontSize: 10, 
+        color: "#A0A0A0", 
+        fontWeight: "400",     
+    },
+    locationIcon: {
+        position: "relative", 
+        width: 11, 
+        aspectRatio: "0.74" 
+    },
+    locationText: {
+        fontFamily: "Helvetica Neue, sans-serif", 
+        flexGrow: "1", 
+        flexShrink: "1", 
+        flexBasis: "auto", 
+    },
+    cardDivider: {
+        backgroundColor: "#A0A0A0", 
+        marginTop: 12, 
+        flexShrink: 0, 
+        height: 1, 
+    },
+    cardRSVP: {
+        display: "flex", 
+        marginTop: 17, 
+        alignItems: "stretch", 
+        justifyContent: "space-between", 
+        gap: 4, 
+        padding: "0 2px", 
+    },
+    rsvpImage: {
+        strokeWidth: 10, 
+        stroke: "#2B2B2B", 
+        overflow: "hidden",
+        alignSelf: "start", 
+        position: "relative", 
+        display: "flex", 
+        aspectRatio: "5", 
+        width: 50, 
+        paddingRight: 20, 
+        justifyContent: "center", 
+        alignItems: "center",
+    },
+    rsvpStar: {
+        strokeWidth: 10, 
+        stroke:"#EEDFF6", 
+        position: "relative", 
+        width: "100%", 
+        aspectRatio: "3.03",
+    },
+    rsvpStats: {
+        color: "#A0A0A0", 
+        margin: "auto 0", 
+        font: "400 8px Helvetica Neue, sans-serif ",
+    },
+    rsvpCaption: {
+        color: "#A0A0A0", 
+        font: "400 10px Helvetica Neue, sans-serif ",
+    },
+    answeredAvatar: {
+        fill: "#EEDFF6", 
+        position: "relative", 
+        width: 12, 
+        margin: "auto 0", 
+        aspectRatio: "1.72", 
+    },
+    pendingAvatar: {
+        position: "relative", 
+        width: 72, 
+        aspectRatio: "5.88"
+    },
+});

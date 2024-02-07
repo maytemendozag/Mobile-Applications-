@@ -1,0 +1,137 @@
+import * as React from "react";
+import { FlatList, ScrollView, View, StyleSheet, Image, Text, TextInput, TouchableOpacity } from "react-native";
+
+function MyComponent() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <Text style={styles.headerText}>Spontan</Text>
+      </View>
+      <View style={styles.subHeaderContainer}>
+        <Text style={styles.subHeaderText}>
+          Embrace the spark of Spontaneity!
+        </Text>
+      </View>
+      <View style={styles.formContainer}>
+        <Text style={styles.instructionText}>
+          Forgot your password?
+        </Text>
+        <Text style={styles.descriptionText}>
+          Write down your email address and we will send you the instructions to change it
+        </Text>
+        <View style={styles.form}>
+          <Text style={styles.labelText}>Email</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Enter your email"
+            keyboardType="email-address"
+            aria-label="Email Address"
+          />
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Send Email</Text>
+          </TouchableOpacity>
+        </View>
+        <TouchableOpacity style={styles.backToLoginContainer}>
+          <Text style={styles.backToLoginText}>Back to Log In</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#2B2B2B",
+    flex: 1,
+    alignItems: "center",
+    padding: 50,
+    maxWidth: 360,
+  },
+  headerContainer: {
+    marginTop: 6,
+  },
+  headerText: {
+    textAlign: "center",
+    color: "#F8F8F8",
+    fontStyle: "italic",
+    fontWeight: "bold",
+    fontSize: 32,
+    fontFamily: "Helvetica Neue, sans-serif",
+  },
+  subHeaderContainer: {
+    marginTop: 40,
+  },
+  subHeaderText: {
+    textAlign: "center",
+    color: "#F8F8F8",
+    fontStyle: "italic",
+    fontWeight: "500",
+    fontSize: 24,
+    lineHeight: 24,
+    fontFamily: "Helvetica Neue, sans-serif",
+  },
+  formContainer: {
+    marginTop: 29,
+    backgroundColor: "#3B3B3B",
+    borderRadius: 8,
+    boxShadow: "0 4px 4px rgba(0, 0, 0, 0.20)",
+    flex: 1,
+    padding: 50,
+    width: "100%",
+  },
+  instructionText: {
+    color: "#F8F8F8",
+    fontStyle: "italic",
+    fontSize: 16,
+    fontFamily: "Inter, sans-serif",
+  },
+  descriptionText: {
+    marginTop: 11,
+    color: "#A0A0A0",
+    fontStyle: "italic",
+    fontSize: 13,
+    fontFamily: "Inter, sans-serif",
+  },
+  form: {
+    marginTop: 12,
+  },
+  labelText: {
+    marginTop: 23,
+    color: "#F8F8F8",
+    fontSize: 16,
+    fontStyle: "italic",
+    fontFamily: "Inter, sans-serif",
+  },
+  input: {
+    borderRadius: 8,
+    backgroundColor: "#424242",
+    height: 40,
+    marginTop: 12,
+    color: "#fff",
+  },
+  button: {
+    marginTop: 28,
+    backgroundColor: "#FDD3D5",
+    padding: 8,
+    alignItems: "center",
+  },
+  buttonText: {
+    color: "#000",
+    fontStyle: "italic",
+    fontWeight: "bold",
+    fontSize: 14,
+    fontFamily: "Inter, sans-serif",
+  },
+  backToLoginContainer: {
+    marginTop: 16,
+    marginBottom: 208,
+    alignSelf: "center",
+  },
+  backToLoginText: {
+    fontSize: 10,
+    fontWeight: "bold",
+    color: "#AFE8C4",
+    fontFamily: "Inter, sans-serif",
+    fontStyle: "italic",
+  },
+});

@@ -1,0 +1,413 @@
+import * as React from "react";
+import { StyleSheet, Image, Text, View } from "react-native";
+
+function MyComponent() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.headerSection}>
+        <Text>Spontan</Text>
+      </View>
+      <View style={styles.activitySection}>
+        <View style={styles.activityInfo}>
+          <Image
+            resizeMode="auto"
+            source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4be477d3838647abf46de9e6866d4eb6af0d853fe546ae1c6a0e15c0432c835d?apiKey=622ad441e8974127abe2d2704e8e167a&",
+            }}
+            style={styles.profileImage}
+          />
+          <View style={styles.activityText}>
+            <Text> Name Surname {"\n"} proposed an activity! </Text>
+          </View>
+        </View>
+        <Image
+          resizeMode="auto"
+          source={{
+            uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/f79e78340f27bd37f88ff8c2d5363cb032268665c88c82e6dd75a910b387f2f6?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.secondaryImage}
+        />
+      </View>
+      <View style={styles.detailsSection}>
+        <View style={styles.detailsRow}>
+          <View style={styles.tagSection}>
+            <Text>@tag</Text>
+          </View>
+          <View style={styles.categorySection}>
+            <Text>category</Text>
+          </View>
+          <View style={styles.timeSection}>
+            <Text>09:37</Text>
+          </View>
+        </View>
+        <View style={styles.heading}>
+          <Text>Heading title from the form</Text>
+        </View>
+        <View style={styles.description}>
+          <Text>I want to go to the gym, tomorrow at 13:00.</Text>
+        </View>
+        <View style={styles.timeSlot}>
+          <Image
+            resizeMode="auto"
+            source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/ba418c362da8e4daf6a50999880f752916ae2ec925bf3eef333b876d37c64bd7?apiKey=622ad441e8974127abe2d2704e8e167a&",
+            }}
+            style={styles.timeSlotImage}
+          />
+          <View style={styles.timeSlotText}>
+            <Text>Tomorrow 13.00 - 15.00</Text>
+          </View>
+        </View>
+        <View style={styles.location}>
+          <Image
+            resizeMode="auto"
+            source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/bde44c2b7ae1aa48cb8ad338a3f0d229afb22016f6dc377812898bd2e4cea72f?apiKey=622ad441e8974127abe2d2704e8e167a&",
+            }}
+            style={styles.locationImage}
+          />
+          <View style={styles.locationText}>
+            <Text>Fitness Fridhemsplan</Text>
+          </View>
+        </View>
+        <View style={styles.mapPlaceholder} />
+        <View style={styles.mapTextSection}>
+          <Text>Google Maps</Text>
+        </View>
+        <View style={styles.addressSection}>
+          <View style={styles.addressInfo}>
+            <View style={styles.addressLabels}>
+              <Text>Address:</Text>
+            </View>
+            <View style={styles.openingHours}>
+              <Text>Opening Hours:</Text>
+            </View>
+          </View>
+          <View style={styles.addressDetails}>
+            <View style={styles.addressText}>
+              <Text> Fridhemsplansroad 1000 {"\n"} 100 10 Stockholm </Text>
+            </View>
+            <Image
+              resizeMode="auto"
+              source={{
+                uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/c148498456fd9a15165759559e5e1e0ef7294b72b62b53b308e7cc6f05c8bc66?apiKey=622ad441e8974127abe2d2704e8e167a&",
+              }}
+              style={styles.mapIcon}
+            />
+            <View style={styles.operatingHours}>
+              <View style={styles.operatingDays}>
+                <Text> Mon - Fri: {"\n"} Sat: </Text>
+              </View>
+              <View style={styles.operatingTimes}>
+                <Text> 06.00 - 23.00 {"\n"} 08.00 - 21.00 </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <Image
+        resizeMode="auto"
+        source={{
+          uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/3cd27b72d3224954541c5d4da2c8ac8a555c4ee1988aa9e00b7cdf4bb6542cba?apiKey=622ad441e8974127abe2d2704e8e167a&",
+        }}
+        style={styles.footerImage}
+      />
+      <View style={styles.gallerySection}>
+        <View style={styles.mainImage}>
+          <Image
+            resizeMode="cover"
+            source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/479ee96b27e76ef15e55b142da53b9b99ca956ca54c83e14f95d05f9e0d32b57?apiKey=622ad441e8974127abe2d2704e8e167a&",
+            }}
+            style={styles.galleryImageMain}
+          />
+          <Image
+            resizeMode="auto"
+            source={{
+              uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/4f30d27ae31de583401676d867fc32fb16b05fbac5ab7f08c3dc0b0a5368125a?apiKey=622ad441e8974127abe2d2704e8e167a&",
+            }}
+            style={styles.galleryImageSecondary}
+          />
+        </View>
+        <View style={styles.imageCounter}>
+          <Text>1/2 </Text>
+        </View>
+      </View>
+      <View style={styles.thumbnailSection}>
+        <Image
+          resizeMode="auto"
+          source={{
+            uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/7eecc48ceb2a738e56c90efb56fe067e153c3c48ecf511b2de118233a9e4f8d4?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.thumbnailImage}
+        />
+        <Image
+          resizeMode="auto"
+          source={{
+            uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/daac41e920339bee22aad46e7b95e7da3b8658594b1ba7127bd008c903782388?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.thumbnailImage}
+        />
+        <Image
+          resizeMode="auto"
+          source={{
+            uri: "https://cdn.builder.io/api/v1/image/assets/TEMP/248f5503458a5a6cfebe81cffdec7dc81139ed873b5842b59e2e437e476f1bb5?apiKey=622ad441e8974127abe2d2704e8e167a&",
+          }}
+          style={styles.thumbnailImage}
+        />
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: "#2B2B2B",
+    display: "flex",
+    maxWidth: 360,
+    flexDirection: "column",
+    alignItems: "stretch",
+    padding: 50,
+  },
+  headerSection: {
+    color: "#F8F8F8",
+    textAlign: "center",
+    alignSelf: "center",
+    marginTop: 6,
+    italic: "bold 32px/1 Helvetica Neue, sans-serif",
+  },
+  activitySection: {
+    borderRadius: 8,
+    boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25)",
+    backgroundColor: "#3B3B3B",
+    display: "flex",
+    marginTop: 27,
+    alignItems: "start",
+    justifyContent: "space-between",
+    gap: 20,
+    fontSize: 16,
+    color: "#F8F8F8",
+    fontWeight: "500",
+    padding: 18,
+  },
+  activityInfo: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+  },
+  profileImage: {
+    position: "relative",
+    width: 12,
+    aspectRatio: "1",
+  },
+  activityText: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+    fontStyle: "italic",
+    marginTop: 6,
+  },
+  secondaryImage: {
+    position: "relative",
+    marginTop: 9,
+    width: 50,
+    aspectRatio: "1",
+  },
+  detailsSection: {
+    borderRadius: 8,
+    boxShadow: "0 4px 4px rgba(0, 0, 0, 0.20)",
+    backgroundColor: "#3B3B3B",
+    display: "flex",
+    marginTop: 8,
+    width: "100%",
+    flexDirection: "column",
+    alignItems: "stretch",
+    padding: 18,
+  },
+  detailsRow: {
+    display: "flex",
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 20,
+    fontSize: 10,
+    color: "#A0A0A0",
+    fontWeight: "300",
+  },
+  tagSection: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+    fontStyle: "italic",
+  },
+  categorySection: {
+    textAlign: "center",
+    fontFamily: "'Helvetica Neue', sans-serif",
+    fontStyle: "italic",
+  },
+  timeSection: {
+    textAlign: "right",
+    fontFamily: "'Helvetica Neue', sans-serif",
+    fontStyle: "italic",
+  },
+  heading: {
+    color: "#F8F8F8",
+    marginTop: 16,
+    font: "italic bold 20px/1 Helvetica Neue, sans-serif",
+  },
+  description: {
+    color: "#A0A0A0",
+    marginTop: 13,
+    font: "normal 10px/1 Helvetica Neue, sans-serif",
+  },
+  timeSlot: {
+    display: "flex",
+    marginTop: 23,
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 8,
+    fontSize: 10,
+    color: "#A0A0A0",
+    fontWeight: "400",
+  },
+  timeSlotImage: {
+    position: "relative",
+    width: 15,
+    aspectRatio: "1",
+  },
+  timeSlotText: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+    flexGrow: 1,
+    margin: "auto 0",
+  },
+  location: {
+    display: "flex",
+    marginTop: 9,
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 11,
+    fontSize: 10,
+    color: "#A0A0A0",
+    fontWeight: "400",
+  },
+  locationImage: {
+    position: "relative",
+    width: 11,
+    aspectRatio: "0.74",
+  },
+  locationText: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+    flexGrow: 1,
+  },
+  mapPlaceholder: {
+    borderRadius: 8,
+    backgroundColor: "#A0A0A0",
+    marginTop: 24,
+    height: 176,
+  },
+  mapTextSection: {
+    color: "#F8F8F8",
+    marginTop: 17,
+    font: "italic bold 20px/1 Helvetica Neue, sans-serif",
+  },
+  addressSection: {
+    display: "flex",
+    marginTop: 13,
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 20,
+    fontSize: 10,
+    color: "#A0A0A0",
+    fontWeight: "400",
+  },
+  addressInfo: {
+    alignSelf: "start",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+  },
+  addressLabels: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+  },
+  openingHours: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+    marginTop: 63,
+  },
+  addressDetails: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "stretch",
+  },
+  addressText: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+  },
+  mapIcon: {
+    position: "relative",
+    width: 68,
+    margin: "13px 0 0 10px",
+    aspectRatio: "5.56",
+  },
+  operatingHours: {
+    display: "flex",
+    marginTop: 24,
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 20,
+  },
+  operatingDays: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+  },
+  operatingTimes: {
+    fontFamily: "'Helvetica Neue', sans-serif",
+  },
+  footerImage: {
+    stroke: "#A0A0A0",
+    position: "relative",
+    marginTop: 24,
+    aspectRatio: "Infinity",
+  },
+  gallerySection: {
+    display: "flex",
+    marginTop: 21,
+    width: "100%",
+    paddingRight: 10,
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 20,
+  },
+  mainImage: {
+    alignSelf: "start",
+    display: "flex",
+    alignItems: "stretch",
+    gap: 11,
+  },
+  galleryImageMain: {
+    stroke: "#2B2B2B",
+    overflow: "hidden",
+    position: "relative",
+    display: "flex",
+    aspectRatio: "5",
+    width: 50,
+    paddingRight: 20,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  galleryImageSecondary: {
+    stroke: "#EEDFF6",
+    position: "relative",
+    width: "100%",
+    aspectRatio: "3.03",
+  },
+  imageCounter: {
+    color: "#A0A0A0",
+    textAlign: "center",
+    margin: "auto 0",
+    font: "normal 8px/1 Helvetica Neue, sans-serif",
+  },
+  thumbnailSection: {
+    display: "flex",
+    alignItems: "stretch",
+    justifyContent: "space-between",
+    gap: 20,
+  },
+  thumbnailImage: {
+    position: "relative",
+    width: 32,
+    aspectRatio: "2.63",
+  },
+});
